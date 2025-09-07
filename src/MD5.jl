@@ -22,7 +22,7 @@ end
 
 
 # AbstractStrings are a pretty handy thing to be able to crunch through
-md5(str::AbstractString) = md5(codeunits(str))
+md5(str::AbstractString) = md5(IOBuffer(str))
 
 # Convenience function for IO devices, allows for things like:
 # open("test.txt") do f
